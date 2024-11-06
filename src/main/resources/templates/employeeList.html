@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<body>
+<h2>Employee List</h2>
+<table>
+    <tr>
+        <th>ID</th><th>Name</th><th>Email</th><th>Location</th>
+    </tr>
+    <tr th:each="employee : ${employees}">
+        <td th:text="${employee.employeeId}"></td>
+        <td th:text="${employee.employeeName}"></td>
+        <td th:text="${employee.employeeEmail}"></td>
+        <td th:text="${employee.location}"></td>
+    </tr>
+</table>
+</body>
+</html>
